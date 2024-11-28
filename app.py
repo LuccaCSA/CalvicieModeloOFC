@@ -3,10 +3,11 @@ import numpy as np
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import pickle
 from sklearn.preprocessing import StandardScaler
+import os
 
 # Caminhos atualizados dos arquivos salvos
-MODEL_PATH = "C:/Users/Luquinha/Desktop/godigos/CalvicieModelo/modeloCalvos.pkl"
-SCALER_PATH = "C:/Users/Luquinha/Desktop/godigos/CalvicieModelo/scaler.pkl"
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "modeloCalvos.pkl")
+SCALER_PATH = os.path.join(os.path.dirname(__file__), "scaler.pkl")
 
 # Carregar o modelo treinado
 @st.cache_resource
